@@ -1,0 +1,2 @@
+# SwayRice
+My sway config
