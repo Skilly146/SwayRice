@@ -1,0 +1,29 @@
+default:
+    repository: "sftp:192.168.1.5:/home/landond/backups/fedora"
+    password-file: "fedora_password.txt"
+
+    backup:
+        exclude-file: "fedora_exclude.txt"
+        tag: "manual"
+        source:
+        - "/"
+
+scheduled:
+    inherit: default
+
+    backup:
+        tag: "automatic"
+        schedule: "hourly"
+        schedule-permission: system
+        schedule-ignore-on-battery: true
+
+    retention:
+        after-backup: true
+        keep-daily: 7
+        keep-weekly: 5
+        keep-monthly: 2
+        keep-tag: "manual"
+        prune: true
+
+    prune:
+        max-unused: "10%"

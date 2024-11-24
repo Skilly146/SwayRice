@@ -1,0 +1,27 @@
+[Added Associations]
+application/x-zerosize=org.kde.kate.desktop;
+application/x-desktop=com.vscodium.codium.desktop;org.kde.kate.desktop;
+application/x-trash=org.kde.kate.desktop;
+text/html=org.kde.kate.desktop;org.kde.okular.desktop;
+application/octet-stream=org.kde.kate.desktop;
+text/plain=com.vscodium.codium.desktop;
+application/pdf=org.kde.okular.desktop;
+application/x-executable=foot.desktop;
+text/x-python=com.vscodium.codium.desktop;
+text/javascript=com.vscodium.codium.desktop;
+
+[Default Applications]
+application/x-zerosize=org.kde.kate.desktop
+application/x-trash=org.kde.kate.desktop
+application/octet-stream=org.kde.kate.desktop
+text/plain=com.vscodium.codium.desktop
+application/pdf=org.kde.okular.desktop
+application/x-executable=foot.desktop
+x-scheme-handler/https=qutebrowser-qutebrowser.desktop
+application/xhtml+xml=qutebrowser-qutebrowser.desktop
+application/xml=qutebrowser-qutebrowser.desktop
+application/rdf+xml=qutebrowser-qutebrowser.desktop
+text/html=qutebrowser-qutebrowser.desktop
+x-scheme-handler/http=qutebrowser-qutebrowser.desktop
+x-scheme-handler/qute=qutebrowser-qutebrowser.desktop
+x-scheme-handler/jetbrains-gateway=jetbrains-gateway.desktop

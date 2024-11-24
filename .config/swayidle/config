@@ -1,0 +1,8 @@
+# Turn off all displays if locked for 10 seconds and turn back on on resume
+timeout 10 'if pgrep -x swaylock; then swaymsg "output * power off"; fi' resume 'swaymsg "output * power on"'
+
+# Pause media and lock screen before sleeping
+before-sleep 'playerctl pause; swaylock'
+
+# Set lock action
+lock 'swaylock -f'

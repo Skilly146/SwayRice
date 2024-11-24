@@ -1,0 +1,5 @@
+install restic and resticprofile(https://creativeprojects.github.io/resticprofile/installation/index.html).
+
+Copy folder to ~/.config/
+
+run "sudo resticprofile restore" with any desired --exclude= flags

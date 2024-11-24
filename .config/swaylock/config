@@ -1,0 +1,49 @@
+# Behavior flags
+ignore-empty-password
+daemonize
+indicator-caps-lock
+disable-caps-lock-text
+
+# Set background image
+image=~/Pictures/Wallpapers/blurredWallpaper.png
+
+# Indicator Size and position
+indicator-radius=175
+indicator-thickness=25
+
+# Highlight color
+key-hl-color=fff7ee
+caps-lock-key-hl-color=fff7ee
+
+bs-hl-color=3e3c3c
+caps-lock-bs-hl-color=3e3c3c
+
+separator-color=00000000
+
+# Ring color
+ring-color=00000000
+ring-clear-color=3e3c3c
+ring-caps-lock-color=f56e00
+ring-ver-color=f56e00
+ring-wrong-color=00000000
+
+# Background color
+inside-color=00000000
+inside-clear-color=00000000
+inside-caps-lock-color=00000000
+inside-ver-color=00000000
+inside-wrong-color=00000000
+
+# Line color
+line-color=00000000
+line-clear-color=00000000
+line-caps-lock-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+
+# Text color
+text-color=00000000
+text-clear-color=00000000
+text-caps-lock-color=00000000
+text-ver-color=00000000
+text-wrong-color=00000000
