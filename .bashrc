@@ -11,8 +11,8 @@ if ! [[ "$PATH" =~ "$HOME/.cargo/bin:$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
-# Set default editor to vim
-export EDITOR=vim
+# Set default editor to neovim
+export EDITOR=nvim
 export VISUAL=$EDITOR
 
 # Aliases
