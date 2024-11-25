@@ -1,3 +1,0 @@
-[filesystem "JetBrains s.r.o.|21.0.4|/dev/mapper/luks-6e188003-f899-4cda-bccb-35b8f899ad4d"]
-	timestampResolution = 3179 nanoseconds
-	minRacyThreshold = 1370 microseconds
