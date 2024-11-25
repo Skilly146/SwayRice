@@ -7,6 +7,7 @@ My sway config, including dotfiles and application configs.
   - autostart: autostart apps
   
   - Thunar: Not really sure what the files in this one are
+  - xfce4: Not sure but related to thunar
   
   - distrobox: config file for distrobox
   
