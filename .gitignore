@@ -12,9 +12,10 @@ Pictures/*
 # Include .ssh/ but not .ssh/keys/
 !.ssh/
 .ssh/keys/
-# Include .config/ but not dconf, go, ibus, JetBrains, jgit, lxqt, menus, procps,
-# toolbox, user-dirs.locale
+# Include .config/ but not Thunar, dconf, go, ibus, JetBrains, jgit, lxqt, menus, procps,
+# toolbox, xfce4, user-dirs.locale
 !.config/
+.config/Thunar/
 .config/dconf/
 .config/go/
 .config/ibus/
@@ -24,6 +25,7 @@ Pictures/*
 .config/menus/
 .config/procps/
 .config/toolbox/
+.config/xfce4
 .config/user-dirs.locale
 # Only include settings.json from .config/joplin-desktop/
 .config/joplin-desktop/*
