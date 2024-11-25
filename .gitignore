@@ -9,8 +9,9 @@
 !Pictures/
 Pictures/*
 !Pictures/Wallpapers/
-# Include .ssh/ but not .ssh/keys/
+# Include .ssh/ but not known_hosts*, .ssh/keys/
 !.ssh/
+.ssh/known_hosts*
 .ssh/keys/
 # Include .config/ but not Thunar, dconf, go, ibus, JetBrains, jgit, lxqt, menus, procps,
 # toolbox, xfce4, user-dirs.locale
