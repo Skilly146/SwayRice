@@ -1,0 +1,35 @@
+# Exclude Everything
+/*
+# Include .bashrc, .gitconfig, .gitignore and README.md
+!.bashrc
+!.gitconfig
+!.gitignore
+!README.md
+# Include Pictures/Wallpapers/*
+!Pictures/Wallpapers/*
+# Include .ssh/* but not .ssh/keys
+!.ssh/
+.ssh/keys
+# Include .config but not dconf, go, ibus, JetBrains, jgit, lxqt, menus, procps,
+# toolbox, xfce4, user-dirs.locale
+!.config/
+.config/dconf
+.config/go
+.config/ibus
+.config/JetBrains
+.config/jgit
+.config/lxqt
+.config/menus
+.config/procps
+.config/toolbox
+.config/xfce4
+.config/user-dirs.locale
+# Only include settings.json from .config/joplin-desktop
+.config/joplin-desktop
+!.config/joplin-desktop/settings.json
+# Only include config.py and userscripts/* from .config/qutebrowser
+.config/qutebrowser/*
+!.config/qutebrowser/config.py
+!.config/qutebrowser/userscripts/*
+# Include .local/bin
+!.local/bin/*
