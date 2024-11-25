@@ -1,0 +1,12 @@
+#!/bin/bash
+notify-send "Updating"
+# Upgrade the base image and layered packages
+/usr/bin/rpm-ostree update
+# Repair, uninstall unused, and then update flatpaks without confirmation
+/usr/bin/flatpak repair
+/usr/bin/flatpak uninstall -y --unused
+/usr/bin/flatpak update -y --appstream
+# Upgrade all distrobox containers through their package managers
+/usr/bin/distrobox-upgrade -a
+# Send notification when all updates are done
+notify-send "Update Completed"

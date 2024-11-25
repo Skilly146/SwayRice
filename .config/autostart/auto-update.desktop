@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Auto-update
+#Exec=/home/landond/.local/bin/auto_update
+Exec=flatpak run org.mozilla.firefox
