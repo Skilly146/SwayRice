@@ -7,10 +7,10 @@
 !README.md
 # Include Pictures/Wallpapers/*
 !Pictures/Wallpapers/*
-# Include .ssh/* but not .ssh/keys
+# Include .ssh/ but not .ssh/keys
 !.ssh/
 .ssh/keys
-# Include .config but not dconf, go, ibus, JetBrains, jgit, lxqt, menus, procps,
+# Include .config/* but not dconf, go, ibus, JetBrains, jgit, lxqt, menus, procps,
 # toolbox, xfce4, user-dirs.locale
 !.config/
 .config/dconf
@@ -30,6 +30,8 @@
 # Only include config.py and userscripts/* from .config/qutebrowser
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
-!.config/qutebrowser/userscripts/*
-# Include .local/bin
-!.local/bin/*
+!.config/qutebrowser/userscripts/
+# Include .local/bin/*
+!.local/
+.local/*
+!.local/bin/
