@@ -48,8 +48,6 @@ My sway config, including dotfiles and application configs.
   - config: ssh config file that includes all of the files in config.d
   
   - config.d: config files for each ssh host including a shortened host name, the real hostname, username, and identity file stored in the not included .ssh/keys/ directory for obvious reasons
-  
-  - known_hosts and known_hosts.old: the automatically created known_hosts and known_hosts backup files
 
 - .local/bin: Various self installed programs, usually just simple bash scripts
 
