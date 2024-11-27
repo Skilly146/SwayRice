@@ -86,7 +86,9 @@ def main():
 
     new = get_new(walls, hst)
     # backslash escape any parenthesis in the path. swaymsg parses 
-    # multiple times so we need three backslashes (times 2)
+    # two times times so we need three escaped backslashes, 
+    # one for python, one for the program swaymsg parses with, 
+    # and one more for swaymsg itself
     new = str(new).replace("(", "\\\\\\(").replace(")", "\\\\\\)")
     print(new)
     if new:
