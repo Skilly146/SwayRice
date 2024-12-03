@@ -10,6 +10,8 @@ application/x-executable=foot.desktop;
 text/x-python=com.vscodium.codium.desktop;
 text/javascript=com.vscodium.codium.desktop;
 application/x-shellscript=com.vscodium.codium.desktop;
+text/x-java=com.vscodium.codium.desktop;
+text/x-csrc=com.vscodium.codium.desktop;
 
 [Default Applications]
 application/x-zerosize=org.kde.kate.desktop
