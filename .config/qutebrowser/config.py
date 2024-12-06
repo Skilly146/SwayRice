@@ -2,31 +2,13 @@
 config.load_autoconfig()
 
 
-### New Stuff
-config.set("content.autoplay", False)
-config.set("content.mute", True)
-config.set("content.pdfjs", True)
-config.set("downloads.remove_finished", 15000)
-config.set("input.spatial_navigation", True)
-config.set("qt.force_software_rendering", "none")
-config.set("search.ignore_case", "always")
-config.set("tabs.last_close", "blank")
-config.set("tabs.mousewheel_switching", True)
-config.set("tabs.undo_stack_size", -1)
-config.set("url.default_page", "about:blank")
-config.set("url.start_pages", "about:blank")
-config.set("window.hide_decoration", True)
-config.set("content.local_content_can_access_remote_urls", True)
-config.set("downloads.location.suggestion", "both")
-
-
 ### Custom bindings
 ## Change scroll distance
 config.bind("j", "scroll-px 0 300")
 config.bind("k", "scroll-px 0 -300")
 
 ## Tab manager bindings
-# tab-manager shortcut
+# Bring up tab manager "groups" command on cmd line with zg
 config.bind("zg", "zg: cmd-set-text -s :groups")
 # Open index with zz
 config.bind("zz", "groups open -f index")
@@ -50,13 +32,12 @@ config.bind("zD", "cmd-set-text -s :groups delete -f")
 config.bind("zh", "groups help")
 
 ## Bash readline bindings
-# Backspace
+# Delete character behind cursor
 config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
-
-# Delete character in front of cursor
-config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
 # Delete the previous word
 config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
+# Delete character in front of cursor
+config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
 # Delete word in front of cursor
 config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
 # Move to beginning
@@ -103,10 +84,37 @@ config.set("aliases", {
 
 
 ### Settings
-## Ad block
-config.set("content.blocking.method", "both")
+## Tabs
+# Open tab manager index file at startup
+config.set("url.start_pages", "file:///home/landond/.local/share/qutebrowser/userSessions/index.html")
+# Open tab manager index file when last tab closed
+config.set("tabs.last_close", "startpage")
+# New tabs default to blank
+config.set("url.default_page", "about:blank")
+# Disable switching tabs with scrollwheel
+config.set("tabs.mousewheel_switching", False)
+# Unlimited undo tab closes
+config.set("tabs.undo_stack_size", -1)
 
-## Change editor command to kate
+## Downloads
+# Remove download bar after 15 seconds (15000ms)
+config.set("downloads.remove_finished", 15000)
+# Allow downloading or viewing downloads
+config.set("downloads.location.suggestion", "both")
+
+## Content
+# Enable brave adblocker
+config.set("content.blocking.method", "both")
+# Disable autoplay
+config.set("content.autoplay", False)
+# Auto mute tabs
+config.set("content.mute", True)
+# Enable pdfjs pdf viewer
+config.set("content.pdfjs", True)
+# I don't know
+config.set("content.local_content_can_access_remote_urls", True)
+
+## Change editor command to vscode
 config.set("editor.command", ["distrobox-host-exec", "flatpak", "run", "com.vscodium.codium", "{file}"])
 
 ## Dark Mode
@@ -118,14 +126,19 @@ config.set("colors.webpage.darkmode.threshold.foreground", text_threshold)
 config.set("colors.webpage.darkmode.threshold.background", bg_threshold)
 config.set("colors.webpage.darkmode.policy.images", "never")
 
-## Set style sheet
-#config.set("content.user_stylesheets", "stylesheet.css")
-
-## Smooth Scrolling
+## Misc
+# Use heuristics to navigate with arrow keys
+config.set("input.spatial_navigation", True)
+# Enable smooth scrolling
 config.set("scrolling.smooth", True)
-
-## Save on quit
+# Save session on close
 config.set("auto_save.session", True)
+# Disable software rendering
+config.set("qt.force_software_rendering", "none")
+# Ignore casing when searching
+config.set("search.ignore_case", "always")
+# Hide window decorations since WM
+config.set("window.hide_decoration", True)
 
 ### Theme
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
