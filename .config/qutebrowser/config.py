@@ -111,8 +111,9 @@ config.set("content.autoplay", False)
 config.set("content.mute", True)
 # Enable pdfjs pdf viewer
 config.set("content.pdfjs", True)
-# I don't know
+# Allow local documents to link to external and local urls
 config.set("content.local_content_can_access_remote_urls", True)
+config.set("content.local_content_can_access_file_urls", True)
 
 ## Change editor command to vscode
 config.set("editor.command", ["distrobox-host-exec", "flatpak", "run", "com.vscodium.codium", "{file}"])
