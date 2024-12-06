@@ -1,7 +1,8 @@
-# Load ui settings
+### Load ui settings
 config.load_autoconfig()
 
-# New Stuff
+
+### New Stuff
 config.set("content.autoplay", False)
 config.set("content.mute", True)
 config.set("content.pdfjs", True)
@@ -18,10 +19,12 @@ config.set("window.hide_decoration", True)
 config.set("content.local_content_can_access_remote_urls", True)
 config.set("downloads.location.suggestion", "both")
 
+
 ### Custom bindings
 ## Change scroll distance
 config.bind("j", "scroll-px 0 300")
 config.bind("k", "scroll-px 0 -300")
+
 ## Tab manager bindings
 # tab-manager shortcut
 config.bind("zg", "zg: cmd-set-text -s :groups")
@@ -46,13 +49,46 @@ config.bind("zD", "cmd-set-text -s :groups delete -f")
 # Open help page with zh
 config.bind("zh", "groups help")
 
+## Bash readline bindings
+# Backspace
+config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
+
+# Delete character in front of cursor
+config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
+# Delete the previous word
+config.bind("<Ctrl-w>", "fake-key <Ctrl-Backspace>", "insert")
+# Delete word in front of cursor
+config.bind("<Mod1-d>", "fake-key <Ctrl-Delete>", "insert")
+# Move to beginning
+config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
+# Move to end
+config.bind("<Ctrl-e>", "fake-key <End>", "insert")
+# Move back one character
+config.bind("<Ctrl-b>", "fake-key <Left>", "insert")
+# Move back one word
+config.bind("<Mod1-b>", "fake-key <Ctrl-Left>", "insert")
+# Move forward one character
+config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
+# Move forward one word
+config.bind("<Mod1-f>", "fake-key <Ctrl-Right>", "insert")
+# Previous command
+config.bind("<Ctrl-p>", "fake-key <Up>", "insert")
+# Next command
+config.bind("<Ctrl-n>", "fake-key <Down>", "insert")
+# Delete everything left of the cursor (not working)
+config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
+# Delete everything right of the cursor (not working)
+config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
+# Edit text in text editor
+config.bind("<Ctrl-x><Ctrl-e>", "open-editor", "insert")
+
 ## Misc
 # Open config.py with SS
 config.bind("SS", "config-edit ;; open -t qute://help/configuring.html#configpy")
 # Reload config
 config.bind(",r", "config-source")
 
-# Aliases
+## Aliases
 config.set("aliases", {
     # open tab-manager with required paths using "groups"
     "groups": "spawn -u tab-manager/tab-manager.py /home/landond/.local/share/qutebrowser/userSessions/",
@@ -65,13 +101,15 @@ config.set("aliases", {
     "qw": "quit --save"
 })
 
-# Ad block
+
+### Settings
+## Ad block
 config.set("content.blocking.method", "both")
 
-# Change editor command to kate
+## Change editor command to kate
 config.set("editor.command", ["distrobox-host-exec", "flatpak", "run", "com.vscodium.codium", "{file}"])
 
-# Dark Mode
+## Dark Mode
 bg_threshold = 125
 text_threshold = 256 - bg_threshold
 config.set("colors.webpage.preferred_color_scheme", "dark")
@@ -80,13 +118,13 @@ config.set("colors.webpage.darkmode.threshold.foreground", text_threshold)
 config.set("colors.webpage.darkmode.threshold.background", bg_threshold)
 config.set("colors.webpage.darkmode.policy.images", "never")
 
-# Set style sheet
+## Set style sheet
 #config.set("content.user_stylesheets", "stylesheet.css")
 
-# Smooth Scrolling
+## Smooth Scrolling
 config.set("scrolling.smooth", True)
 
-# Save on quit
+## Save on quit
 config.set("auto_save.session", True)
 
 ### Theme
