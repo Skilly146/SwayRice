@@ -18,13 +18,13 @@
 		"children": [
 			{
 				"key": "sideBar",
-				"width": 175,
-				"visible": true
+				"width": 252,
+				"visible": false
 			},
 			{
 				"key": "noteList",
-				"width": 178,
-				"visible": true
+				"width": 286,
+				"visible": false
 			},
 			{
 				"key": "editor",

@@ -13,6 +13,7 @@ application/x-shellscript=com.vscodium.codium.desktop;
 text/x-java=com.vscodium.codium.desktop;
 text/x-csrc=com.vscodium.codium.desktop;
 text/x-makefile=com.vscodium.codium.desktop;
+application/json=com.vscodium.codium.desktop;
 
 [Default Applications]
 application/x-zerosize=org.kde.kate.desktop
