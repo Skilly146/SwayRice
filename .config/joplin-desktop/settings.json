@@ -19,12 +19,12 @@
 			{
 				"key": "sideBar",
 				"width": 252,
-				"visible": false
+				"visible": true
 			},
 			{
 				"key": "noteList",
 				"width": 286,
-				"visible": false
+				"visible": true
 			},
 			{
 				"key": "editor",
