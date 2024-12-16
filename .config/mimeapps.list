@@ -14,6 +14,7 @@ text/x-java=com.vscodium.codium.desktop;
 text/x-csrc=com.vscodium.codium.desktop;
 text/x-makefile=com.vscodium.codium.desktop;
 application/json=com.vscodium.codium.desktop;
+application/vnd.ms-publisher=com.vscodium.codium.desktop;
 
 [Default Applications]
 application/x-zerosize=org.kde.kate.desktop
@@ -30,3 +31,4 @@ text/html=qutebrowser-qutebrowser.desktop
 x-scheme-handler/http=qutebrowser-qutebrowser.desktop
 x-scheme-handler/qute=qutebrowser-qutebrowser.desktop
 x-scheme-handler/jetbrains-gateway=jetbrains-gateway.desktop
+application/vnd.ms-publisher=com.vscodium.codium.desktop
