@@ -1,0 +1,72 @@
+# Can add constants for more complicated configs
+constants:
+  flashdrive: 9ebb4923-1250-456a-9d5d-1d487a5061f9
+
+# Add btrfs support
+#btrfs:
+
+# Source from landond home directory
+source_directories:
+  - /home/landond
+  - /etc
+
+# Backup to BorgBase, Optiplex, flash drive, and disk in that order
+repositories:
+  #- path: ssh://rc83sl9g@rc83sl9g.repo.borgbase.com/./repo
+    #label: BorgBase-Offsite
+  #- path: ssh://server:/backups/framework
+    #label: Optiplex-Remote
+  - path: /run/media/landond/{flashdrive}/framework
+    label: FlashDrive-Local
+  - path: /home/landond/Documents/backups/framework
+    label: OnDisk-Local
+
+# Don't access mounted drives
+one_file_system: true
+
+# Exclude files listed in exclude.txt
+exclude_from:
+  - /home/landond/.config/borgmatic.d/exclude.txt
+
+# Mark directory for no backup by adding a .nobackup file
+exclude_if_present:
+  - .nobackup
+
+# Set repo password
+encryption_passphrase: "7TAVr8Joh9e3u6bYdJrBDjaS3hx4PgmK4kuxhqfhcZqfqX9pMfNV4BAHC8dKPjMjiQXwCalnyGnxaDSkjMfYxzKVWxVlXdGXDlkU"
+
+# Also options for secondly and minutely
+# Pruning options: 12H, 7D, 4W, 12M, 1Y, and always keep last 72H
+keep_within: 72H
+keep_hourly: 12
+keep_daily: 7
+keep_weekly: 4
+keep_monthly: 12
+keep_yearly: 1
+
+# Do a repo, data, and dry-extract check 
+checks:
+  - name: repository
+  - name: data
+  - name: extract
+
+# Also options for before_actions, backup, prune, compact, check, or extract
+# Backup distrobox containers before anything starts
+before_everything:
+  - findmnt UUID={flashdrive} || mount -m -U {flashdrive} /run/media/landond/{flashdrive}
+  - /home/landond/.local/bin/backup-distrobox
+
+# Also options for after_actions, backup, prune, compact, check, or extract
+# Remove distrobox images after everything finishes
+after_everything:
+  - rm ~/Documents/backups/distrobox/*.backup
+  - umount /run/media/landond/{flashdrive}
+  - rmdir /run/media/landond/{flashdrive}
+
+# Send notification when borgmatic encounters and error
+on_error:
+  - notify-send "Borgmatic config {configuration_filename} encountered the error {error} on repo {repository}, with the output {output}"
+
+# Options for dumping all kinds of databases
+
+# Options for integrating monitoring
