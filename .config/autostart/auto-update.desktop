@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Auto-update
-Exec=flatpak run org.mozilla.firefox
-Type=Application
-StartupNotify=false
