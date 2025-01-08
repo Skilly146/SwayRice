@@ -21,7 +21,6 @@ alias lh='ls -a'
 alias ll='lh -lh'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
-alias ping='prettyping'
 alias vim='nvim'
 alias enter='distrobox enter'
 # Open kate flatpak with file forwarding to the provided file
