@@ -1,0 +1,2 @@
+# Run pre-configured borgmatic backup with full logging in ~/.local/state/borgmatic.log
+exec borgmatic --verbosity 1 --list --stats > ~/.local/state/borgmatic.log

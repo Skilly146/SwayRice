@@ -1,0 +1,2 @@
+# Update system with logs stored in ~/.local/state/update.log
+exec auto_update > ~/.local/state/update.log
