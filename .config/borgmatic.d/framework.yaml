@@ -1,22 +1,21 @@
 # Can add constants for more complicated configs
 constants:
-  flashdrive: 9ebb4923-1250-456a-9d5d-1d487a5061f9
+  flashdrive-uuid: 793fa9ab-99c2-474c-bfdd-d871a097d552
 
-# Add btrfs support
+# Add btrfs support, not working
 #btrfs:
 
 # Source from landond home directory
 source_directories:
   - /home/landond
-  - /etc
 
 # Backup to BorgBase, Optiplex, flash drive, and disk in that order
 repositories:
-  #- path: ssh://rc83sl9g@rc83sl9g.repo.borgbase.com/./repo
-    #label: BorgBase-Offsite
-  #- path: ssh://server:/backups/framework
-    #label: Optiplex-Remote
-  - path: /run/media/landond/{flashdrive}/framework
+  - path: ssh://qf01n413@qf01n413.repo.borgbase.com/./repo
+    label: BorgBase-Offsite
+  - path: ssh://server:/backups/framework
+    label: Optiplex-Remote
+  - path: /run/media/landond/{flashdrive-uuid}/framework
     label: FlashDrive-Local
   - path: /home/landond/Documents/backups/framework
     label: OnDisk-Local
@@ -33,7 +32,7 @@ exclude_if_present:
   - .nobackup
 
 # Set repo password
-encryption_passphrase: "7TAVr8Joh9e3u6bYdJrBDjaS3hx4PgmK4kuxhqfhcZqfqX9pMfNV4BAHC8dKPjMjiQXwCalnyGnxaDSkjMfYxzKVWxVlXdGXDlkU"
+encryption_passphrase: "WpePCySeRqrAZsbgR7Pu3YbnAgozVL"
 
 # Also options for secondly and minutely
 # Pruning options: 12H, 7D, 4W, 12M, 1Y, and always keep last 72H
@@ -47,25 +46,29 @@ keep_yearly: 1
 # Do a repo, data, and dry-extract check 
 checks:
   - name: repository
-  - name: data
   - name: extract
 
-# Also options for before_actions, backup, prune, compact, check, or extract
-# Backup distrobox containers before anything starts
+# Also options for before_actions, prune, compact, check, or extract
+# Mount flashdrive and backup distrobox containers before anything starts
 before_everything:
-  - findmnt UUID={flashdrive} || mount -m -U {flashdrive} /run/media/landond/{flashdrive}
-  - /home/landond/.local/bin/backup-distrobox
+  # Check that the usb is connected, only then check if mounted and if not mount. If not connected echo warning
+  - blkid | grep {flashdrive-uuid} && (findmnt UUID={flashdrive-uuid} || udisksctl mount -b /dev/disk/by-uuid/{flashdrive-uuid}) || echo "{flashdrive-uuid} isn't connected for mounting"
+  - backup-distrobox
+
+before_backup:
+  - check-borg-repo {repository_label}
 
 # Also options for after_actions, backup, prune, compact, check, or extract
-# Remove distrobox images after everything finishes
+# Remove distrobox images and unmount flashdrive after everything finishes
 after_everything:
-  - rm ~/Documents/backups/distrobox/*.backup
-  - umount /run/media/landond/{flashdrive}
-  - rmdir /run/media/landond/{flashdrive}
+  # Check that distrobox backups were created before deleting, if not then echo a warning
+  - ls ~/Documents/backups/distrobox | grep .backup && rm ~/Documents/backups/distrobox/*.backup || echo "No distrobox backups to delete"
+  # Run same usb connected and mounted checks before unmounting
+  - blkid | grep {flashdrive-uuid} && (findmnt UUID={flashdrive-uuid} && udisksctl unmount -b /dev/disk/by-uuid/{flashdrive-uuid}) || echo "{flashdrive-uuid} isn't connected for unmounting"
 
-# Send notification when borgmatic encounters and error
-on_error:
-  - notify-send "Borgmatic config {configuration_filename} encountered the error {error} on repo {repository}, with the output {output}"
+# # Send notification if borgmatic encounters and error
+# on_error:
+#   - notify-send "Borgmatic config {configuration_filename} encountered the error {error} on repo {repository}, with the output {output}"
 
 # Options for dumping all kinds of databases
 
