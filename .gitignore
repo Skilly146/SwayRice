@@ -28,6 +28,7 @@ Pictures/*
 .config/toolbox/
 .config/xfce4
 .config/user-dirs.locale
+.config/borg
 # Only include settings.json from .config/joplin-desktop/
 .config/joplin-desktop/*
 !.config/joplin-desktop/settings.json
