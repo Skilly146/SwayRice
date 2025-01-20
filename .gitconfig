@@ -3,3 +3,5 @@
 [user]
 	email = accounts@landond.tech
 	name = Landon Davidson
+[core]
+	autocrlf = input
