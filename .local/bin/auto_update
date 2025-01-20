@@ -1,25 +1,12 @@
 #!/bin/bash
-# Get user who ran script
-if ! [ $(id -u) = 0 ]; then
-   echo "The script need to be run as root." >&2
-   exit 1
-fi
-
-if [ $SUDO_USER ]; then
-    real_user=$SUDO_USER
-else
-    real_user=$(whoami)
-fi
-
-# Run non root commands with SUbstitute User Do as original user
-sudo -u $real_user notify-send "Updating"
-# Upgrade the base image and layered packages
-sudo -u $real_user /usr/bin/rpm-ostree update
-# Repair, uninstall unused, and then update flatpaks without confirmation, runs with root because script is sudo
-/usr/bin/flatpak repair
-/usr/bin/flatpak uninstall -y --unused
-/usr/bin/flatpak update -y --appstream
-# Upgrade all distrobox containers through their package managers
-sudo -u $real_user /usr/bin/distrobox-upgrade -a
+notify-send "Updating"
+# Update base image and layered packages
+rpm-ostree update
+# Repair, uninstall unused, and then update flatpaks without confirmation, flatpak commands added to visudo so sudo doesn't request password
+sudo flatpak repair
+sudo flatpak uninstall --unused -y
+sudo flatpak update --appstream -y
 # Send notification when all updates are done
-sudo -u $real_user notify-send "Update Completed"
+distrobox-upgrade --all
+# Send notification when all updates are done
+notify-send "Update Complete"
