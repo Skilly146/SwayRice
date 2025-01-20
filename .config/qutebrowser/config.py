@@ -93,6 +93,8 @@ config.set("tabs.last_close", "startpage")
 config.set("url.default_page", "about:blank")
 # Disable switching tabs with scrollwheel
 config.set("tabs.mousewheel_switching", False)
+# Select Previous tab when current tab closed
+config.set("tabs.select_on_remove", "prev")
 # Unlimited undo tab closes
 config.set("tabs.undo_stack_size", -1)
 
@@ -107,6 +109,8 @@ config.set("downloads.location.suggestion", "both")
 config.set("content.blocking.method", "both")
 # Disable autoplay
 config.set("content.autoplay", False)
+# Accept all cookies
+config.set("content.cookies.accept", "all")
 # Auto mute tabs
 config.set("content.mute", True)
 # Enable pdfjs pdf viewer
@@ -118,7 +122,10 @@ config.set("content.local_content_can_access_file_urls", True)
 ## Change editor command to vscode
 config.set("editor.command", ["distrobox-host-exec", "flatpak", "run", "com.vscodium.codium", "{file}"])
 
-## Dark Mode
+## Appearance
+# High DPI mode
+config.set("qt.highdpi", True)
+# Dark Mode
 bg_threshold = 125
 text_threshold = 256 - bg_threshold
 config.set("colors.webpage.preferred_color_scheme", "dark")
@@ -128,6 +135,8 @@ config.set("colors.webpage.darkmode.threshold.background", bg_threshold)
 config.set("colors.webpage.darkmode.policy.images", "never")
 
 ## Misc
+# QT arguments
+#config.set("qt.args", "null")
 # Use heuristics to navigate with arrow keys
 config.set("input.spatial_navigation", True)
 # Enable smooth scrolling
