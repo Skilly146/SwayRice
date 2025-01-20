@@ -16,15 +16,13 @@ export EDITOR=nvim
 export VISUAL=$EDITOR
 
 # Aliases
-alias ls='ls --color=auto'
+alias ls='ls -F --color=auto'
 alias lh='ls -a'
 alias ll='lh -lh'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias vim='nvim'
 alias enter='distrobox enter'
-# Open kate flatpak with file forwarding to the provided file
-alias kate='~/.local/bin/kate_wrapper.sh'
 # Open codium flatpak
 alias codium='flatpak run com.vscodium.codium'
 
