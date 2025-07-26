@@ -1,7 +1,8 @@
 #!/bin/bash
 notify-send "Updating"
 # Update base image and layered packages
-rpm-ostree update
+rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfree-release \
+    --install rpmfusion-free-release --install rpmfusion-nonfree-release
 # Repair, uninstall unused, and then update flatpaks without confirmation, flatpak commands added to visudo so sudo doesn't request password
 sudo flatpak repair
 sudo flatpak uninstall --unused -y

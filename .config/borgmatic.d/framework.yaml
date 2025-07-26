@@ -1,0 +1,79 @@
+# Constants
+constants:
+  home: "/home/landond"
+  flash_uuid: ""
+
+# Source from landond home directory
+source_directories:
+  - "{home}"
+
+# Backup to BorgBase, Optiplex, flash drive, and disk in that order
+repositories:
+  #- path: ssh://hh239kit@hh239kit.repo.borgbase.com/./repo
+  #  label: BorgBase-Offsite
+  - path: "{home}/Documents/backups/framework"
+    label: OnDisk-Local
+
+# Don't access mounted drives
+one_file_system: true
+
+# Exclude files listed in exclude.txt
+exclude_from:
+  - "{home}/.config/borgmatic.d/exclude.txt"
+
+# Mark directory for no backup by adding a .nobackup file
+exclude_if_present: 
+  - .nobackup
+
+# Set repo password
+encryption_passcommand: cat {home}/.config/borgmatic.d/password.txt
+
+# Also options for secondly and minutely
+# Pruning options: 12H, 7D, 4W, 12M, 1Y, and always keep last 72H
+keep_within: 72H
+keep_hourly: 12
+keep_daily: 7
+keep_weekly: 4
+keep_monthly: 12
+keep_yearly: 2
+
+# Do a repo, data, and dry-extract check 
+checks:
+  - name: extract
+    frequency: always
+  - name: extract
+    frequency: always
+  - name: repository
+    frequency: 1 week
+  - name: data
+    frequency: 2 weeks
+
+commands:
+  # Create backups of distrobox before creating an archive and delete them after
+  - before: configuration
+    when: [create]
+    run: 
+      - backup-distrobox
+  - after: configuration
+    when: [create]
+    run: 
+      - ls ~/Documents/backups/distrobox | grep .backup && rm ~/Documents/backups/distrobox/*.backup || echo "No distrobox backups to delete"
+  # Check before each backup that the repo is available to avoid errors
+  - before: action
+    when: [create]
+    run: 
+      - check-borg-repo {repository_label}
+  # Send notification if a backup fails
+  - after: error
+    run: 
+      - notify-send "Borgmatic config {configuration_filename} encountered the error {error} on repo {repository}, with the output {output}"  
+
+# Retry with delay
+retries: 3
+retry_wait: 5
+
+# Max verbosity since it gets piped to a log, could add the file here but is currently redirected by cron
+verbosity: 2
+
+# Add btrfs support, need to clean up subvolumes
+#btrfs:

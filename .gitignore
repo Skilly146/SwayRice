@@ -36,7 +36,8 @@ Pictures/*
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
 !.config/qutebrowser/userscripts/
-# Include .local/bin/*
+# Include .local/bin/* but not bw
 !.local/
 .local/*
 !.local/bin/
+.local/bin/bw

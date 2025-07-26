@@ -1,0 +1,41 @@
+[Unit]
+Description=borgmatic backup
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+
+LockPersonality=true
+MemoryDenyWriteExecute=no
+NoNewPrivileges=yes
+PrivateDevices=yes
+PrivateTmp=yes
+ProtectClock=yes
+ProtectControlGroups=yes
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectKernelModules=yes
+ProtectKernelTunables=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallErrorNumber=EPERM
+ProtectSystem=full
+
+CapabilityBoundingSet=CAP_DAC_READ_SEARCH CAP_NET_RAW
+
+Nice=19
+CPUSchedulingPolicy=batch
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+IOWeight=100
+
+Restart=no
+LogRateLimitIntervalSec=0
+
+ExecStartPre=sleep 1m
+ExecStart=systemd-inhibit --who="borgmatic" --why="Prevent interrupting scheduled backup" borgmatic --syslog-verbosity 1

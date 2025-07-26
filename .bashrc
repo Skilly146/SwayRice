@@ -24,7 +24,7 @@ alias ip='ip -color=auto'
 alias vim='nvim'
 alias enter='distrobox enter'
 # Open codium flatpak
-alias codium='flatpak run com.vscodium.codium'
+#alias codium='flatpak run com.vscodium.codium'
 
 # Check if the current env contains DISTROBOX
 if (env | grep -Fq 'DISTROBOX'); then
