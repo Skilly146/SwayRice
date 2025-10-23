@@ -5,9 +5,9 @@ rpm-ostree update --uninstall rpmfusion-free-release --uninstall rpmfusion-nonfr
     --install rpmfusion-free-release --install rpmfusion-nonfree-release
 # Repair, uninstall unused, and then update flatpaks without confirmation, flatpak commands added to visudo so sudo doesn't request password
 sudo flatpak repair
+sudo flatpak update -y
 sudo flatpak uninstall --unused -y
-sudo flatpak update --appstream -y
-# Send notification when all updates are done
+# Run updates on each container environment
 distrobox-upgrade --all
 # Send notification when all updates are done
 notify-send "Update Complete"
