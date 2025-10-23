@@ -1,5 +1,5 @@
 [Added Associations]
-application/x-zerosize=org.kde.kate.desktop;
+application/x-zerosize=org.kde.kate.desktop;development-codium.desktop;
 application/x-desktop=jetbrains-codium.desktop;com.vscodium.codium.desktop;org.kde.kate.desktop;
 application/x-trash=org.kde.kate.desktop;
 text/html=org.kde.kate.desktop;org.kde.okular.desktop;
@@ -22,7 +22,7 @@ text/x-chdr=jetbrains-codium.desktop;
 application/x-openvpn-profile=jetbrains-codium.desktop;
 
 [Default Applications]
-application/x-zerosize=org.kde.kate.desktop
+application/x-zerosize=development-codium.desktop
 application/x-trash=org.kde.kate.desktop
 application/octet-stream=org.kde.kate.desktop
 text/plain=com.vscodium.codium.desktop
