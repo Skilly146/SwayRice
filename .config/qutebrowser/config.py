@@ -120,7 +120,7 @@ config.set("content.local_content_can_access_remote_urls", True)
 config.set("content.local_content_can_access_file_urls", True)
 
 ## Change editor command to vscode
-config.set("editor.command", ["distrobox-host-exec", "flatpak", "run", "com.vscodium.codium", "{file}"])
+config.set("editor.command", ["distrobox-host-exec", "codium", "{file}"])
 
 ## Appearance
 # High DPI mode
