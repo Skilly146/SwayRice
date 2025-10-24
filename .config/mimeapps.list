@@ -1,0 +1,7 @@
+
+[Default Applications]
+text/html=qutebrowser-qutebrowser.desktop
+x-scheme-handler/http=qutebrowser-qutebrowser.desktop
+x-scheme-handler/https=qutebrowser-qutebrowser.desktop
+x-scheme-handler/about=qutebrowser-qutebrowser.desktop
+x-scheme-handler/unknown=qutebrowser-qutebrowser.desktop
