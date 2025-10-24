@@ -13,31 +13,31 @@ Pictures/*
 !.ssh/
 .ssh/known_hosts*
 .ssh/keys/
-# Include .config/ but not Thunar, dconf, go, ibus, JetBrains, jgit, lxqt, menus, procps,
-# toolbox, xfce4, user-dirs.locale
+# Include .config/ with some exceptions
 !.config/
-.config/Thunar/
 .config/dconf/
 .config/go/
 .config/ibus/
-.config/JetBrains/
 .config/jgit/
 .config/lxqt/
 .config/menus/
 .config/procps/
 .config/toolbox/
-.config/xfce4
-.config/user-dirs.locale
 .config/borg
 # Only include settings.json from .config/joplin-desktop/
 .config/joplin-desktop/*
 !.config/joplin-desktop/settings.json
-# Only include config.py and userscripts/* from .config/qutebrowser
-.config/qutebrowser/*
-!.config/qutebrowser/config.py
-!.config/qutebrowser/userscripts/
-# Include .local/bin/* but not bw
+# Include .local/bin/*
 !.local/
 .local/*
 !.local/bin/
-.local/bin/bw
+# Only include config.py and userscripts/* from .config/qutebrowser and userSessions
+.config/qutebrowser/*
+!.config/qutebrowser/config.py
+!.config/qutebrowser/userscripts/
+# Include userSessions for qutebrowser
+!.local/share/
+.local/share/*
+!.local/share/qutebrowser/
+.local/share/qutebrowser/*
+!.local/share/qutebrowser/userSessions

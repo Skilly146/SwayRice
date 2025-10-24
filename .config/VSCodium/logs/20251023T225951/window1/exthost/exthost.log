@@ -1,0 +1,37 @@
+2025-10-23 22:59:53.054 [info] Extension host with pid 37774 started
+2025-10-23 22:59:53.140 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-10-23 22:59:53.149 [info] ExtensionService#_doActivateExtension mhutchie.git-graph, startup: true, activationEvent: '*'
+2025-10-23 22:59:53.202 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-10-23 22:59:53.264 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-10-23 22:59:53.359 [info] Eager extensions activated
+2025-10-23 22:59:53.368 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-23 22:59:53.371 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-23 22:59:53.393 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2025-10-23 22:59:53.587 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-10-23 22:59:53.678 [info] ExtensionService#_doActivateExtension felipecaputo.git-project-manager, startup: false, activationEvent: 'onStartupFinished'
+2025-10-23 22:59:53.697 [info] ExtensionService#_doActivateExtension usernamehw.errorlens, startup: false, activationEvent: 'onStartupFinished'
+2025-10-23 22:59:53.869 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-10-23 22:59:56.384 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-23 22:59:56.395 [error] An error occurred when disposing the subscriptions for extension 'eamodio.gitlens':
+2025-10-23 22:59:56.399 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+	at Object.dispose (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:142:135136)
+	at D_.<anonymous> (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:110:26299)
+	at D_.dispose (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:110:26395)
+	at Object.dispose (/home/landond/.vscode-oss/extensions/eamodio.gitlens-17.6.2-universal/dist/gitlens.js:2115:29269)
+	at /home/landond/.vscode-oss/extensions/eamodio.gitlens-17.6.2-universal/dist/gitlens.js:2394:17196
+	at Array.forEach (<anonymous>)
+	at Object.dispose (/home/landond/.vscode-oss/extensions/eamodio.gitlens-17.6.2-universal/dist/gitlens.js:2394:17178)
+	at zr (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:746)
+	at EL._fn (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:18542)
+	at EL.dispose (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:25:1261)
+	at SY._deactivate (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:14807)
+	at file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:12093
+	at Array.map (<anonymous>)
+	at SY._deactivateAll (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:12081)
+	at SY.terminate (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:12434)
+	at B8.terminate (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:1082)
+	at As (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:393:11090)
+	at MessagePortMain.<anonymous> (file:///usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:393:7537)
+	at MessagePortMain.emit (node:events:519:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2025-10-23 22:59:56.401 [info] Extension host with pid 37774 exiting with code 0
