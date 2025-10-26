@@ -1,0 +1,8 @@
+2025-10-25 03:33:41.224 [info] Extension host with pid 95557 started
+2025-10-25 03:33:41.328 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-25 03:33:41.346 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-10-25 03:33:41.354 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-10-25 03:33:41.366 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2025-10-25 03:33:41.428 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2025-10-25 03:33:41.480 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-25 03:33:41.481 [info] Extension host with pid 95557 exiting with code 0

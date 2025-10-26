@@ -6,8 +6,24 @@
   <property name="last-window-width" type="int" value="1665"/>
   <property name="last-window-height" type="int" value="1078"/>
   <property name="last-window-maximized" type="bool" value="false"/>
-  <property name="misc-single-click" type="bool" value="false"/>
+  <property name="misc-single-click" type="bool" value="true"/>
   <property name="last-toolbar-items" type="string" value="menu:0,back:1,forward:1,open-parent:1,open-home:1,new-tab:0,new-window:0,toggle-split-view:0,undo:0,redo:0,zoom-out:0,zoom-in:0,zoom-reset:0,view-as-icons:0,view-as-detailed-list:0,view-as-compact-list:0,view-switcher:0,location-bar:1,reload:0,search:1,uca-action-1761261604778398-1:1"/>
-  <property name="last-show-hidden" type="bool" value="true"/>
+  <property name="last-show-hidden" type="bool" value="false"/>
   <property name="last-separator-position" type="int" value="170"/>
+  <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_38_PERCENT"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,132,50,50,113,50,50,1025,50,50,77,50,147"/>
+  <property name="misc-change-window-icon" type="bool" value="false"/>
+  <property name="misc-file-size-binary" type="bool" value="false"/>
+  <property name="misc-thumbnail-mode" type="string" value="THUNAR_THUMBNAIL_MODE_ALWAYS"/>
+  <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_SHORT"/>
+  <property name="misc-symbolic-icons-in-sidepane" type="bool" value="false"/>
+  <property name="misc-single-click-timeout" type="uint" value="0"/>
+  <property name="misc-middle-click-in-tab" type="bool" value="true"/>
+  <property name="misc-open-new-window-as-tab" type="bool" value="true"/>
+  <property name="misc-full-path-in-tab-title" type="bool" value="true"/>
+  <property name="misc-show-delete-action" type="bool" value="true"/>
+  <property name="misc-parallel-copy-mode" type="string" value="THUNAR_PARALLEL_COPY_MODE_ONLY_LOCAL"/>
+  <property name="misc-transfer-use-partial" type="string" value="THUNAR_USE_PARTIAL_MODE_REMOTE"/>
+  <property name="misc-transfer-verify-file" type="string" value="THUNAR_VERIFY_FILE_MODE_REMOTE"/>
+  <property name="misc-exec-shell-scripts-by-default" type="string" value="THUNAR_EXECUTE_SHELL_SCRIPT_ASK"/>
 </channel>

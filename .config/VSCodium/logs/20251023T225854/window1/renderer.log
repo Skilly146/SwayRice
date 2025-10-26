@@ -1,6 +1,0 @@
-2025-10-23 22:58:55.743 [info] Started local extension host with pid 36814.
-2025-10-23 22:58:55.822 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
-2025-10-23 22:58:56.936 [error] Cannot read properties of undefined (reading 'extensionId'): TypeError: Cannot read properties of undefined (reading 'extensionId')
-    at t (vscode-file://vscode-app/usr/share/codium/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:2745)
-    at tIt.recommendRemoteExtensionIfNeeded (vscode-file://vscode-app/usr/share/codium/resources/app/out/vs/workbench/workbench.desktop.main.js:4070:3495)
-2025-10-23 22:58:58.993 [info] [perf] Render performance baseline is 29ms

@@ -7,7 +7,7 @@
         "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1761285535163"
+                "backupFolder": "1761457184752"
             }
         ]
     },
@@ -15,12 +15,12 @@
     "profileAssociations": {
         "workspaces": {},
         "emptyWindows": {
-            "1761285535163": "__default__profile__"
+            "1761457184752": "__default__profile__"
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/landond/.homes/development/.config/VSCodium/Backups/1761285535163",
+            "backupPath": "/home/landond/.homes/development/.config/VSCodium/Backups/1761457184752",
             "uiState": {
                 "mode": 0,
                 "x": 1117,
@@ -54,8 +54,8 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 35,
             "activityBarWidth": 48,
-            "sideBarWidth": 170,
-            "auxiliaryBarWidth": 170,
+            "sideBarWidth": 0,
+            "auxiliaryBarWidth": 0,
             "statusBarHeight": 22,
             "windowBorder": false
         }
