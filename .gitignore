@@ -31,10 +31,6 @@ Pictures/*
 !.local/
 .local/*
 !.local/bin/
-# Only include config.py and userscripts/* from .config/qutebrowser and userSessions
-.config/qutebrowser/*
-!.config/qutebrowser/config.py
-!.config/qutebrowser/userscripts/
 # Include userSessions for qutebrowser
 !.local/share/
 .local/share/*
