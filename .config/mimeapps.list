@@ -12,6 +12,8 @@ text/plain=nvim.desktop
 text/markdown=nvim.desktop
 image/png=org.kde.okular.desktop
 application/xml=nvim.desktop
+application/x-desktop=nvim.desktop
+inode/directory=nvim.desktop
 
 [Added Associations]
 application/json=nvim.desktop;
@@ -20,3 +22,5 @@ application/x-zerosize=nvim.desktop;
 text/markdown=nvim.desktop;
 image/png=org.kde.okular.desktop;
 application/xml=nvim.desktop;
+application/x-desktop=nvim.desktop;
+inode/directory=nvim.desktop;

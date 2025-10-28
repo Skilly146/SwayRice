@@ -6,9 +6,9 @@
 !.gitignore
 !README.md
 # Include Pictures/Wallpapers/
-!Pictures/
-Pictures/*
-!Pictures/Wallpapers/
+!pictures/
+pictures/*
+!pictures/Wallpapers/
 # Include .ssh/ but not known_hosts*, .ssh/keys/
 !.ssh/
 .ssh/known_hosts*
