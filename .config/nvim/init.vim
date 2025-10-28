@@ -79,7 +79,7 @@ Plug 'nvim-telescope/telescope.nvim'
   Plug 'sharkdp/fd'
   " Ripgrep, Optional
   Plug 'BurntSushi/ripgrep'
-" File Explorer
+" File Explorer, could also use nvim tree
 Plug 'nvim-neo-tree/neo-tree.nvim'
   " Backend Utilities, Required
   Plug 'nvim-lua/plenary.nvim'
@@ -97,6 +97,8 @@ Plug 'nvim-neo-tree/neo-tree.nvim'
   Plug '3rd/image.nvim'
   " Window Picker Prompt, Optional
   Plug 's1n7ax/nvim-window-picker'
+" Lua Status Line
+Plug 'nvim-lualine/lualine.nvim'
 
 call plug#end()
 
