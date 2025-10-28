@@ -27,6 +27,8 @@ set spell                   " enable spell check (may need to download language 
 " - Review Docs and configure plugins
 " - Split up configs, individually and by vim/nvim
 " - Fallback vim plugins for the nvim exclusives
+" - Figure out snippet plugins and friendly snippets repo
+" - Mini.nvim?
 
 " Plug Plugin Manager
 call plug#begin()
@@ -49,6 +51,24 @@ Plug 'windwp/nvim-autopairs'
 Plug 'folke/trouble.nvim'
 " Breakpoints and Debugging Integration
 Plug 'mfussenegger/nvim-dap'
+" Completion
+Plug 'hrsh7th/nvim-cmp'
+  " LSP Config Collection, Required
+  Plug 'neovim/nvim-lspconfig' 
+  " Completion Source, Required
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  " Buffer Source, Required
+  Plug 'hrsh7th/cmp-buffer'
+  " Path Source, Required
+  Plug 'hrsh7th/cmp-path'
+  " Vim Cmdline Source, Required
+  Plug 'hrsh7th/cmp-cmdline'
+  " Snippet Source, Required
+  Plug 'saadparwaiz1/cmp_luasnip'
+" Snippet Engine
+Plug 'L3MON4D3/LuaSnip'
+" Snippet Collection
+Plug 'rafamadriz/friendly-snippets'
 " Latex Support
 Plug 'lervag/vimtex'
 " File Explorer
