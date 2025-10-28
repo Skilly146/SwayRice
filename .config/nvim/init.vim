@@ -23,6 +23,7 @@ set spell                   " enable spell check (may need to download language 
 "set backupdir=~/.cache/vim " Directory to store backup files.
 
 " TODO
+" - Awesome neovim https://github.com/nvim-lualine/lualine.nvim
 " - Need a theme
 " - Review Docs and configure plugins
 " - Split up configs, individually and by vim/nvim
