@@ -36,6 +36,9 @@ call plug#begin()
 
 " Install Help Pages
 Plug 'junegunn/vim-plug'
+" Gruvbox Theme
+Plug 'ellisonleao/gruvbox.nvim'
+
 " Indentation hints
 Plug 'lukas-reineke/indent-blankline.nvim'
 " Gutter Markings for Git
@@ -102,4 +105,8 @@ Plug 'nvim-neo-tree/neo-tree.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 
 call plug#end()
+
+" Theme Settings
+set background=dark
+colorscheme gruvbox
 
