@@ -71,6 +71,14 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 " Latex Support
 Plug 'lervag/vimtex'
+" Search View
+Plug 'nvim-telescope/telescope.nvim'
+  " fzf Sorter
+  Plug 'nvim-telescope/telescope-fzf-native.nvim'
+  " File Finder, Optional
+  Plug 'sharkdp/fd'
+  " Ripgrep, Optional
+  Plug 'BurntSushi/ripgrep'
 " File Explorer
 Plug 'nvim-neo-tree/neo-tree.nvim'
   " Backend Utilities, Required
