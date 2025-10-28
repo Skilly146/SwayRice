@@ -1,5 +1,6 @@
 {
 	"$schema": "https://joplinapp.org/schema/settings.json",
+	"altInstanceId": "",
 	"editor.codeView": true,
 	"sync.target": 7,
 	"richTextBannerDismissed": true,
@@ -8,7 +9,7 @@
 	"theme": 5,
 	"themeAutoDetect": false,
 	"layoutButtonSequence": 0,
-	"markdown.plugin.softbreaks": true,
+	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
 	"markdown.plugin.sub": true,
 	"markdown.plugin.sup": true,

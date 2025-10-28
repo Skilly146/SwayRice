@@ -1,0 +1,10 @@
+#!/bin/sh
+# distrobox_binary
+# name: development
+if [ -z "${CONTAINER_ID}" ]; then
+	exec "/usr/bin/distrobox-enter"  -n development  --  '/usr/bin/nvim'  "$@"
+elif [ -n "${CONTAINER_ID}" ] && [ "${CONTAINER_ID}" != "development" ]; then
+	exec distrobox-host-exec '/home/landond/.local/bin/nvim' "$@"
+else
+	exec '/usr/bin/nvim' "$@"
+fi
