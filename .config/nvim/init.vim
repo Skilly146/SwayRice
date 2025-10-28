@@ -97,7 +97,7 @@ Plug 'nvim-neo-tree/neo-tree.nvim'
   Plug '3rd/image.nvim'
   " Window Picker Prompt, Optional
   Plug 's1n7ax/nvim-window-picker'
-" Lua Status Line
+" Lua Status Line, can also use airline
 Plug 'nvim-lualine/lualine.nvim'
 
 call plug#end()
