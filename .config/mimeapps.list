@@ -4,9 +4,19 @@ x-scheme-handler/http=qutebrowser-qutebrowser.desktop
 x-scheme-handler/https=qutebrowser-qutebrowser.desktop
 x-scheme-handler/about=qutebrowser-qutebrowser.desktop
 x-scheme-handler/unknown=qutebrowser-qutebrowser.desktop
-application/json=development-codium.desktop
+application/json=nvim.desktop
 application/zip=xarchiver.desktop
+application/yaml=nvim.desktop
+application/x-zerosize=nvim.desktop
+text/plain=nvim.desktop
+text/markdown=nvim.desktop
+image/png=org.kde.okular.desktop
+application/xml=nvim.desktop
 
 [Added Associations]
-application/json=development-codium.desktop;
-application/zip=development-codium.desktop;xarchiver.desktop;
+application/json=nvim.desktop;
+application/zip=xarchiver.desktop;
+application/x-zerosize=nvim.desktop;
+text/markdown=nvim.desktop;
+image/png=org.kde.okular.desktop;
+application/xml=nvim.desktop;
