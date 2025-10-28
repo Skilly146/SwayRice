@@ -29,6 +29,7 @@ call plug#begin()
 
 Plug 'junegunn/vim-plug'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
