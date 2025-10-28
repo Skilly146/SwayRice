@@ -1,0 +1,54 @@
+filters:
+  and:
+    - file.folder != "Templates"
+    - file.ext != "base"
+    - file.ext != "edtz"
+formulas:
+  Type: if(formula.isMOC, "Folder Note", file.folder.replace(/s$/g, ""))
+  isMOC: (file.folder == file.name).isTruthy()
+properties:
+  file.name:
+    displayName: File Name
+  formula.isMOC:
+    displayName: isFolderNote
+views:
+  - type: cards
+    name: Todos
+    filters:
+      and:
+        - file.tags.contains("todo")
+    order:
+      - file.name
+      - formula.Type
+    sort:
+      - property: formula.Type
+        direction: ASC
+  - type: cards
+    name: Works In Progress
+    filters:
+      and:
+        - file.tags.contains("WIP")
+    order:
+      - file.name
+      - formula.Type
+    sort:
+      - property: formula.Type
+        direction: ASC
+  - type: cards
+    name: Folder Notes
+    filters:
+      and:
+        - formula.isMOC == true
+    order:
+      - file.name
+      - aliases
+  - type: cards
+    name: Orphans
+    filters:
+      and:
+        - file.links.isEmpty()
+    order:
+      - file.name
+    sort:
+      - property: formula.isMOC
+        direction: ASC

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Usage: pipeman [text]
+#   If there is text then store it in a temportary file
+#   If there isn't text then print the text from temp file
+
+state_dir="$HOME/.local/state/pipeman"
+
+mkdir -p "$state_dir"
+
+if [ -t 0 ]; then
+	cat "$state_dir/pipe.tmp"
+else 
+	cat - > "$state_dir/pipe.tmp"
+fi
+
+

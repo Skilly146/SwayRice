@@ -7,7 +7,7 @@
         "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1761457184752"
+                "backupFolder": "1761605502755"
             }
         ]
     },
@@ -15,12 +15,15 @@
     "profileAssociations": {
         "workspaces": {},
         "emptyWindows": {
-            "1761457184752": "__default__profile__"
+            "1761555548386": "__default__profile__",
+            "1761556619016": "__default__profile__",
+            "1761558262972": "__default__profile__",
+            "1761605502755": "__default__profile__"
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/landond/.homes/development/.config/VSCodium/Backups/1761457184752",
+            "backupPath": "/home/landond/.homes/development/.config/VSCodium/Backups/1761605502755",
             "uiState": {
                 "mode": 0,
                 "x": 1117,
