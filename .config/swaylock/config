@@ -5,7 +5,7 @@ indicator-caps-lock
 disable-caps-lock-text
 
 # Set background image
-image=~/Pictures/Wallpapers/blurredWallpaper.png
+image=~/pictures/wallpapers/blurredWallpaper.png
 
 # Indicator Size and position
 indicator-radius=175

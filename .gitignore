@@ -8,7 +8,7 @@
 # Include Pictures/Wallpapers/
 !pictures/
 pictures/*
-!pictures/Wallpapers/
+!pictures/wallpapers/
 # Include .ssh/ but not known_hosts*, .ssh/keys/
 !.ssh/
 .ssh/known_hosts*
