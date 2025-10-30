@@ -119,8 +119,9 @@ config.set("content.pdfjs", True)
 config.set("content.local_content_can_access_remote_urls", True)
 config.set("content.local_content_can_access_file_urls", True)
 
-## Change editor command to vscode
-config.set("editor.command", ["distrobox-host-exec", "codium", "{file}"])
+## Change editor command to neovim
+host_editor_command = "foot $HOME/.local/bin/nvim {file}"
+config.set("editor.command", ["distrobox-host-exec", "bash", "-c", host_editor_command])
 
 ## Appearance
 # High DPI mode

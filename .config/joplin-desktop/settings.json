@@ -5,28 +5,33 @@
 	"sync.target": 7,
 	"richTextBannerDismissed": true,
 	"locale": "en_GB",
-	"timeFormat": "h:mm A",
-	"theme": 5,
+	"dateFormat": "MM/DD/YYYY",
+	"timeFormat": "HH:mm",
+	"theme": 7,
 	"themeAutoDetect": false,
 	"layoutButtonSequence": 0,
+	"editor.enableTextPatterns": false,
+	"newNoteFocus": "title",
 	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
 	"markdown.plugin.sub": true,
 	"markdown.plugin.sup": true,
 	"markdown.plugin.insert": true,
+	"renderer.fileUrls": true,
 	"showTrayIcon": false,
 	"startMinimized": false,
+	"style.editor.fontSize": 12,
 	"ui.layout": {
 		"key": "root",
 		"children": [
 			{
 				"key": "sideBar",
-				"width": 252,
+				"width": 229,
 				"visible": true
 			},
 			{
 				"key": "noteList",
-				"width": 230,
+				"width": 267,
 				"visible": true
 			},
 			{
@@ -40,6 +45,8 @@
 		"editor",
 		"viewer"
 	],
+	"editor": "/home/landond/.local/bin/nvim",
+	"export.pdfPageSize": "Letter",
 	"editor.spellcheckBeta": true,
 	"api.token": "dbd7f5bc3d3e79ad62fa14955a21d19d47a39da4b8d72e42c5e2df986c5e1817eb0b0a980ca1bc3b6055b83814e468934a7bb713961b6188ebaf7178bb072eea",
 	"spellChecker.languages": [

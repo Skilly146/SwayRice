@@ -7,7 +7,7 @@
         "folders": [],
         "emptyWindows": [
             {
-                "backupFolder": "1761639879956"
+                "backupFolder": "1761799289269"
             }
         ]
     },
@@ -19,12 +19,15 @@
             "1761556619016": "__default__profile__",
             "1761558262972": "__default__profile__",
             "1761605502755": "__default__profile__",
-            "1761639879956": "__default__profile__"
+            "1761639879956": "__default__profile__",
+            "1761798654089": "__default__profile__",
+            "1761798967260": "__default__profile__",
+            "1761799289269": "__default__profile__"
         }
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/landond/.homes/development/.config/VSCodium/Backups/1761639879956",
+            "backupPath": "/home/landond/.homes/development/.config/VSCodium/Backups/1761799289269",
             "uiState": {
                 "mode": 0,
                 "x": 1117,

@@ -18,7 +18,6 @@ inode/directory=nvim.desktop
 [Added Associations]
 application/json=nvim.desktop;
 application/zip=xarchiver.desktop;
-application/x-zerosize=nvim.desktop;
 text/markdown=nvim.desktop;
 image/png=org.kde.okular.desktop;
 application/xml=nvim.desktop;
