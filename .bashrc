@@ -22,7 +22,8 @@ alias ll='lh -lh'
 alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias vim='nvim'
-alias enter='distrobox enter'
+
+# Git add+commit+push shortcut
 git_cmd="git add ~; git commit; git push"
 if [[ -z $CONTAINER_ID ]]; then
   alias config-update="$git_cmd"
