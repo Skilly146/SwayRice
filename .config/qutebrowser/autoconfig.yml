@@ -6,5 +6,43 @@
 
 config_version: 2
 settings:
+  bindings.commands:
+    global:
+      insert:
+        <Alt+b>: fake-key <Ctrl-Left>
+        <Alt+d>: fake-key <Ctrl-Delete>
+        <Alt+f>: fake-key <Ctrl-Right>
+        <Ctrl+a>: fake-key <Home>
+        <Ctrl+b>: fake-key <Left>
+        <Ctrl+d>: fake-key <Delete>
+        <Ctrl+e>: fake-key <End>
+        <Ctrl+f>: fake-key <Right>
+        <Ctrl+h>: fake-key <Backspace>
+        <Ctrl+k>: fake-key <Shift-End><Delete>
+        <Ctrl+n>: fake-key <Down>
+        <Ctrl+p>: fake-key <Up>
+        <Ctrl+u>: fake-key <Shift-Home><Delete>
+        <Ctrl+w>: fake-key <Ctrl-Backspace>
+        <Ctrl+x><Ctrl+e>: open-editor
+      normal:
+        ',b': bind
+        ',h': cmd-set-text -s :help -t
+        ',r': config-source
+        SS: config-edit
+        Sh: open -t qute://help/configuring.html#configpy
+        j: scroll-px 0 300
+        k: scroll-px 0 -300
+        sh: history -t
+        zA: cmd-set-text -s :groups save-all -c -o -f
+        zD: cmd-set-text -s :groups delete -f
+        zR: cmd-set-text -s :groups restore -f
+        za: cmd-set-text -s :groups save-all -o -f
+        zd: cmd-set-text -s :groups remove -t
+        zg: 'zg: cmd-set-text -s :groups'
+        zh: groups help
+        zo: cmd-set-text -s :groups open -f
+        zr: cmd-set-text -s :groups restore -c -f
+        zs: cmd-set-text -s :groups save -f
+        zz: groups open -f index
   fonts.default_family:
     global: null

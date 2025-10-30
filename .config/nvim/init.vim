@@ -1,6 +1,7 @@
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
+set smartcase               " case sensitive if there are caps
 set mouse=v                 " middle-click paste with 
 set hlsearch                " highlight search 
 set incsearch               " incremental search
@@ -39,6 +40,8 @@ Plug 'junegunn/vim-plug'
 " Gruvbox Theme
 Plug 'ellisonleao/gruvbox.nvim'
 
+" Open at line:column
+Plug 'lervag/file-line'
 " Indentation hints
 Plug 'lukas-reineke/indent-blankline.nvim'
 " Gutter Markings for Git

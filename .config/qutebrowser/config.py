@@ -63,11 +63,21 @@ config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
 # Edit text in text editor
 config.bind("<Ctrl-x><Ctrl-e>", "open-editor", "insert")
 
-## Misc
+## Configuration
+# Open help page in new tab
+config.bind("Sh", "open -t qute://help/configuring.html#configpy")
 # Open config.py with SS
-config.bind("SS", "config-edit ;; open -t qute://help/configuring.html#configpy")
+config.bind("SS", "config-edit")
 # Reload config
 config.bind(",r", "config-source")
+
+## Misc
+# Open history in new tab
+config.bind("sh", "history -t")
+# Prompt for help in new tab
+config.bind(",h", "cmd-set-text -s :help -t") 
+# Open bindings in a new tab
+config.bind(",b", "bind")
 
 ## Aliases
 config.set("aliases", {
@@ -120,7 +130,7 @@ config.set("content.local_content_can_access_remote_urls", True)
 config.set("content.local_content_can_access_file_urls", True)
 
 ## Change editor command to neovim
-host_editor_command = "foot $HOME/.local/bin/nvim {file}"
+host_editor_command = "foot $HOME/.local/bin/nvim '+call cursor({line}, {column})' {file}"
 config.set("editor.command", ["distrobox-host-exec", "bash", "-c", host_editor_command])
 
 ## Appearance
