@@ -23,8 +23,12 @@ alias grep='grep --color=auto'
 alias ip='ip -color=auto'
 alias vim='nvim'
 alias enter='distrobox enter'
-# Codium container alias
-#alias codium="/usr/bin/distrobox-enter -n development -- /usr/bin/codium"
+git_cmd="git add ~; git commit; git push"
+if [[ -z $CONTAINER_ID ]]; then
+  alias config-update="$git_cmd"
+else
+  alias config-update='distrobox-host-exec -- bash -c "$git_cmd"'
+fi
 
 # Check if the current env contains DISTROBOX
 if (env | grep -Fq 'DISTROBOX'); then
