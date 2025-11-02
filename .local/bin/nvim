@@ -1,9 +1,9 @@
 #!/bin/sh
 # distrobox_binary
-# name: development
+# name: fedora
 if [ -z "${CONTAINER_ID}" ]; then
-	exec "/usr/bin/distrobox-enter"  -n development  --  '/usr/bin/nvim'  "$@"
-elif [ -n "${CONTAINER_ID}" ] && [ "${CONTAINER_ID}" != "development" ]; then
+	exec "/usr/bin/distrobox-enter"  -n fedora  --  '/usr/bin/nvim'  "$@"
+elif [ -n "${CONTAINER_ID}" ] && [ "${CONTAINER_ID}" != "fedora" ]; then
 	exec distrobox-host-exec '/home/landond/.local/bin/nvim' "$@"
 else
 	exec '/usr/bin/nvim' "$@"

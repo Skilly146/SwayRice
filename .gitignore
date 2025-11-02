@@ -24,6 +24,7 @@ pictures/*
 .config/procps/
 .config/toolbox/
 .config/borg/
+.config/VSCodium/
 # Only include settings.json from .config/joplin-desktop/
 .config/joplin-desktop/*
 !.config/joplin-desktop/settings.json

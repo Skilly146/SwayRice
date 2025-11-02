@@ -7,7 +7,7 @@
 	"locale": "en_GB",
 	"dateFormat": "MM/DD/YYYY",
 	"timeFormat": "HH:mm",
-	"theme": 7,
+	"theme": 2,
 	"themeAutoDetect": false,
 	"layoutButtonSequence": 0,
 	"editor.enableTextPatterns": false,
@@ -20,7 +20,7 @@
 	"renderer.fileUrls": true,
 	"showTrayIcon": false,
 	"startMinimized": false,
-	"style.editor.fontSize": 12,
+	"style.editor.fontSize": 14,
 	"ui.layout": {
 		"key": "root",
 		"children": [

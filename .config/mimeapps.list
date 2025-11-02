@@ -23,3 +23,4 @@ image/png=org.kde.okular.desktop;
 application/xml=nvim.desktop;
 application/x-desktop=nvim.desktop;
 inode/directory=nvim.desktop;
+application/pdf=org.kde.okular.desktop;

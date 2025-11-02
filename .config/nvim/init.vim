@@ -16,7 +16,6 @@ set cc=200                  " set an 80 column border for good coding style
 filetype plugin indent on   " allow auto-indenting depending on file type
 "syntax on                  " syntax highlighting
 set mouse=a                 " enable mouse click
-set clipboard=unnamedplus   " using system clipboard
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 set spell                   " enable spell check (may need to download language package)
