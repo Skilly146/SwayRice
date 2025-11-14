@@ -26,4 +26,5 @@
   <property name="misc-transfer-use-partial" type="string" value="THUNAR_USE_PARTIAL_MODE_REMOTE"/>
   <property name="misc-transfer-verify-file" type="string" value="THUNAR_VERIFY_FILE_MODE_REMOTE"/>
   <property name="misc-exec-shell-scripts-by-default" type="string" value="THUNAR_EXECUTE_SHELL_SCRIPT_ASK"/>
+  <property name="last-side-pane" type="string" value="THUNAR_SIDEPANE_TYPE_SHORTCUTS"/>
 </channel>

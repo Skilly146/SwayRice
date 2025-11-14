@@ -44,6 +44,8 @@ settings:
         zr: cmd-set-text -s :groups restore -c -f
         zs: cmd-set-text -s :groups save -f
         zz: groups open -f index
+  content.javascript.clipboard:
+    http://localhost:8384: access-paste
   fonts.default_family:
     global: null
   scrolling.smooth:

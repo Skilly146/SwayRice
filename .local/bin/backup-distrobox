@@ -1,5 +1,6 @@
 #!/bin/bash
 # Loop over every distrobox container (list them with list and then return the second entry delimited with "|", finally remove the first line that just says Name)
+exit 0
 for container_name in $(distrobox list | cut -f2 -d'|' | tail -n +2)
     do 
     # Print current container name to stdout
@@ -7,6 +8,6 @@ for container_name in $(distrobox list | cut -f2 -d'|' | tail -n +2)
     # Save container as an image file named container_name-backup
     podman container commit -p "$container_name" "$container_name"-backup
     # Save image as a backup to Documents/backup/distrobox/container_name.backup
-    podman save "$container_name"-backup:latest > /home/$USER/Documents/backups/distrobox/"$container_name".backup
+    podman save "$container_name"-backup:latest > /home/$USER/documents/backups/distrobox/"$container_name".backup
 done
 

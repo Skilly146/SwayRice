@@ -9,9 +9,9 @@ case $1 in
     ;;
 
     # Ping server
-    "Optiplex-Remote")
-    ping server || \
-    (notify-send "Optiplex repo inaccessible"; exit 75)
+    "Server-Remote")
+    ping -q -c 1 100.123.0.1 || \
+    (notify-send "Server repo inaccessible"; exit 75)
     ;;
 
     # Check that flashdrive is connected
@@ -22,7 +22,7 @@ case $1 in
 
     # check that Documents/backups/framework exists
     "OnDisk-Local")
-    ls ~/Documents/backups/framework/ || \
+    ls ~/documents/backups/framework/ || \
     (notify-send "OnDisk repo inaccessible"; exit 75)
     ;;
 

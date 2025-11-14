@@ -14,6 +14,7 @@ image/png=org.kde.okular.desktop
 application/xml=nvim.desktop
 application/x-desktop=nvim.desktop
 inode/directory=nvim.desktop
+message/rfc822=me.proton.Mail.desktop
 
 [Added Associations]
 application/json=nvim.desktop;
@@ -24,3 +25,5 @@ application/xml=nvim.desktop;
 application/x-desktop=nvim.desktop;
 inode/directory=nvim.desktop;
 application/pdf=org.kde.okular.desktop;
+message/rfc822=me.proton.Mail.desktop;
+text/html=nvim.desktop;

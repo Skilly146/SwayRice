@@ -9,12 +9,16 @@ source_directories:
 
 # Backup to BorgBase, Optiplex, flash drive, and disk in that order
 repositories:
-  #- path: ssh://hh239kit@hh239kit.repo.borgbase.com/./repo
-  #  label: BorgBase-Offsite
-  - path: "{home}/Documents/backups/framework"
+  - path: ssh://t0bf3d6b@t0bf3d6b.repo.borgbase.com/./repo
+    label: BorgBase-Offsite
+  - path: "{home}/documents/backups/framework"
     label: OnDisk-Local
+  - path: ssh://landond@server:22/home/landond/data/borg/framework
+    label: Server-Remote
+  #- path: ""
+  #  label: FlashDrive-Local
 
-# Don't access mounted drives
+# Don't backup mounted drives
 one_file_system: true
 
 # Exclude files listed in exclude.txt
@@ -29,7 +33,7 @@ exclude_if_present:
 encryption_passcommand: cat {home}/.config/borgmatic.d/password.txt
 
 # Also options for secondly and minutely
-# Pruning options: 12H, 7D, 4W, 12M, 1Y, and always keep last 72H
+# Pruning options: 12H, 7D, 4W, 12M, 2Y, and always keep last 72H
 keep_within: 72H
 keep_hourly: 12
 keep_daily: 7
@@ -57,7 +61,7 @@ commands:
   - after: configuration
     when: [create]
     run: 
-      - ls ~/Documents/backups/distrobox | grep .backup && rm ~/Documents/backups/distrobox/*.backup || echo "No distrobox backups to delete"
+      - ls ~/documents/backups/distrobox | grep .backup && rm ~/documents/backups/distrobox/*.backup || echo "No distrobox backups to delete"
   # Check before each backup that the repo is available to avoid errors
   - before: action
     when: [create]
