@@ -1,6 +1,5 @@
 #!/bin/bash
 # Loop over every distrobox container (list them with list and then return the second entry delimited with "|", finally remove the first line that just says Name)
-exit 0
 for container_name in $(distrobox list | cut -f2 -d'|' | tail -n +2)
     do 
     # Print current container name to stdout

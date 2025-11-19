@@ -1,6 +1,5 @@
-
 # raw exclusions
-/home/landond/Documents/backups/framework
+/home/landond/documents/backups/framework
 
 # chromium-cache
 fm:*/.config/chromium/*/Application Cache
@@ -178,12 +177,12 @@ fm:*.flatpak-builder
 fm:*/.docker
 
 # vm-container-files
-fm:*.vmdk
-fm:*.vdi
-fm:*.qcow2
-fm:*.iso
-fm:*/.docker/*
-fm:*/.local/share/containers/*
+#fm:*.vmdk
+#fm:*.vdi
+#fm:*.qcow2
+#fm:*.iso
+#fm:*/.docker/*
+#fm:*/.local/share/containers/*
 
 # log-files
 fm:*.log
@@ -197,6 +196,7 @@ fm:*.swp
 # cache-files
 fm:*/.cache
 fm:*/Caches
+fm:*/*cache*
 
 # recycle-bin-trash
 fm:*/.local/share/Trash/*

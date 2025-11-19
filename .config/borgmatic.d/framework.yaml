@@ -1,22 +1,32 @@
 # Constants
 constants:
   home: "/home/landond"
+  etc: "/etc"
+  opt: "/opt"
+  boot: "/boot"
   flash_uuid: ""
 
-# Source from landond home directory
+# Source from writable directories
 source_directories:
   - "{home}"
+  - "{etc}"
+  - "{opt}"
+  - "{boot}"
 
-# Backup to BorgBase, Optiplex, flash drive, and disk in that order
+# Backup to BorgBase, Optiplex, disk, and flash drive in that order
 repositories:
   - path: ssh://t0bf3d6b@t0bf3d6b.repo.borgbase.com/./repo
     label: BorgBase-Offsite
+    encryption: repokey-blake2
   - path: "{home}/documents/backups/framework"
     label: OnDisk-Local
+    encryption: repokey-blake2
   - path: ssh://landond@server:22/home/landond/data/borg/framework
     label: Server-Remote
+    encryption: repokey-blake2
   #- path: ""
   #  label: FlashDrive-Local
+  #  encryption: repokey-blake2
 
 # Don't backup mounted drives
 one_file_system: true
@@ -29,8 +39,8 @@ exclude_from:
 exclude_if_present: 
   - .nobackup
 
-# Set repo password
-encryption_passcommand: cat {home}/.config/borgmatic.d/password.txt
+# Set repo password, will probably prompt user for bitwarden password
+encryption_passcommand: rbw get "Fedora Backup" -f password
 
 # Also options for secondly and minutely
 # Pruning options: 12H, 7D, 4W, 12M, 2Y, and always keep last 72H
@@ -45,8 +55,6 @@ keep_yearly: 2
 checks:
   - name: extract
     frequency: always
-  - name: extract
-    frequency: always
   - name: repository
     frequency: 1 week
   - name: data
@@ -54,14 +62,14 @@ checks:
 
 commands:
   # Create backups of distrobox before creating an archive and delete them after
-  - before: configuration
-    when: [create]
-    run: 
-      - backup-distrobox
-  - after: configuration
-    when: [create]
-    run: 
-      - ls ~/documents/backups/distrobox | grep .backup && rm ~/documents/backups/distrobox/*.backup || echo "No distrobox backups to delete"
+  #- before: configuration
+  #  when: [create]
+  #  run: 
+  #    - backup-distrobox
+  #- after: configuration
+  #  when: [create]
+  #  run: 
+  #    - ls ~/documents/backups/distrobox | grep .backup && rm ~/documents/backups/distrobox/*.backup || echo "No distrobox backups to delete"
   # Check before each backup that the repo is available to avoid errors
   - before: action
     when: [create]
