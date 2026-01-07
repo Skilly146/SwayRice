@@ -46,7 +46,14 @@ settings:
         zz: groups open -f index
   content.javascript.clipboard:
     http://localhost:8384: access-paste
+    https://developer.hashicorp.com: access-paste
+    https://login.tailscale.com: access-paste
+  content.notifications.enabled:
+    https://umatechnology.org: false
   fonts.default_family:
     global: null
   scrolling.smooth:
     global: false
+  url.searchengines:
+    global:
+      DEFAULT: https://duckduckgo.com/?q={}

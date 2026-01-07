@@ -137,13 +137,13 @@ config.set("editor.command", ["distrobox-host-exec", "bash", "-c", host_editor_c
 # High DPI mode
 config.set("qt.highdpi", True)
 # Dark Mode
-bg_threshold = 125
+bg_threshold = 255
 text_threshold = 256 - bg_threshold
-config.set("colors.webpage.preferred_color_scheme", "dark")
-config.set("colors.webpage.darkmode.enabled", True)
+config.set("colors.webpage.preferred_color_scheme", "light")
+config.set("colors.webpage.darkmode.enabled", False)
 config.set("colors.webpage.darkmode.threshold.foreground", text_threshold)
 config.set("colors.webpage.darkmode.threshold.background", bg_threshold)
-config.set("colors.webpage.darkmode.policy.images", "never")
+config.set("colors.webpage.darkmode.policy.images", "smart")
 
 ## Misc
 # QT arguments
